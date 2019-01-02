@@ -1,0 +1,73 @@
+.container{
+    background: url(/assets/swimbg2.jpeg) no-repeat;
+    background-size: cover;
+    direction: rtl;
+    padding: 2rem;
+    height: 100%;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+}
+
+.gallery2{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.photo{
+    display: inline-block;
+}
+.img{
+    height: 330px;
+    width: 400px;
+    border-radius: 5%;
+}
+.white1{
+    color: white;
+    font-family: Assistant;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 77px;
+    top: 190px;
+    position: relative;
+}
+
+.white2{
+    color: white;
+    font-family: Assistant;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 77px;
+    bottom: 316px;
+    position: relative;
+}
+
+.white3{
+    color: white;
+    font-family: Assistant;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 77px;
+    bottom: 100px;
+    position: relative;
+}
+
+.opacity03{
+    opacity: 0.3;
+}

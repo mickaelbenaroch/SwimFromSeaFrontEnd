@@ -1,0 +1,38 @@
+.legend{
+    display: flex;
+    padding: 1rem;
+    border: 1px solid grey;
+    flex-direction: column;
+    width: 20%;
+    font-family: cursive;
+
+}
+.sagol{
+    height: 30px;
+    width: 30px;
+    background-color: #e377c2; 
+}
+.red{
+    height: 30px;
+    width: 30px;
+    background-color: red; 
+}
+.green{
+    height: 30px;
+    width: 30px;
+    background-color: green; 
+}
+.orange{
+    height: 30px;
+    width: 30px;
+    background-color: orange; 
+}
+.class{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+}
+.son{
+    margin-left: 15px;
+    padding-top: 6px;
+}

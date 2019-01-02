@@ -1,0 +1,24 @@
+<div class="container" *ngIf="firstPage">
+  <div id="firstTitle" *ngIf="firstTitle" class="white1 animated rotateIn">
+    <span> חשבתם שאפריקאים מובילים בכל תחומי הספורט? </span>
+  </div>
+<div [ngClass]="{'opacity03' : !this.firstGallery}" id="galllery1" class="gallery">
+  <div *ngFor="let img of imagesArray1" class="photo">
+    <img class="img animated fadeInDown" src="{{img}}">
+  </div>
+</div>
+<div [ngClass]="{'opacity03' : !this.secondGallery && !this.firstGallery}" id="galllery2" class="gallery2">
+    <div *ngFor="let img of imagesArray2" class="photo">
+      <img class="img animated jackInTheBox" src="{{img}}">
+    </div>
+</div>
+  <div id="secondTitle" *ngIf="secondTitle" class="white2 animated rotateInDownLeft"> 
+    <span> הכול טוב ויפה! אבל מה לגבי שחייה? </span>
+  </div>
+  <div id="thirdTitle" *ngIf="thirdTitle" class="white3 animated rotateIn">
+    <span> תופתעו לגלות!</span>
+  </div>
+</div>      
+
+
+<app-buuble-map></app-buuble-map>
