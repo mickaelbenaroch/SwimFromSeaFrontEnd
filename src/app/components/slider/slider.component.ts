@@ -47,13 +47,13 @@ export class SliderComponent implements OnInit {
   ngOnInit() {
     this.firstPage = true;
    setInterval(()=>{
-      var rand1 = this.images[Math.floor(Math.random() * this.images.length)];
-      var rand2 = this.images[Math.floor(Math.random() * this.images.length)];
-      var rand3 = this.images[Math.floor(Math.random() * this.images.length)];
+      var rand1 = this.shakeArray("images");
+      var rand2 = this.shakeArray("images");
+      var rand3 = this.shakeArray("images");
       this.imagesArray1 = [rand1, rand2, rand3]
-      var rand4 = this.images[Math.floor(Math.random() * this.images.length)];
-      var rand5 = this.images[Math.floor(Math.random() * this.images.length)];
-      var rand6 = this.images[Math.floor(Math.random() * this.images.length)];
+      var rand4 = this.shakeArray("images2");
+      var rand5 = this.shakeArray("images2");
+      var rand6 = this.shakeArray("images2");
       this.imagesArray2 = [rand4, rand5, rand6]
 
    },3000)
@@ -66,16 +66,28 @@ export class SliderComponent implements OnInit {
 
     setTimeout(() => {
       this.secondGallery = false;
-      //this.firstTitle = false;
       this.secondTitle = true;
+    }, 13000);
+
+    setTimeout(() => {
+      this.thirdTitle = true;
     }, 15000);
 
     setTimeout(() => {
-      //this.secondTitle = false;
-      this.thirdTitle = true;
       this.firstPage = false;
       this.secondPage = true;
     }, 20000);
   }
 
+  /**
+   * Mix the desired array
+   * @param arrayName 
+   */
+  public shakeArray(arrayName: string):string{
+    if(arrayName == "images"){
+        return this.images[Math.floor(Math.random() * this.images.length)];
+    }else{
+      return this.images2[Math.floor(Math.random() * this.images2.length)];
+    }
+  }
 }
