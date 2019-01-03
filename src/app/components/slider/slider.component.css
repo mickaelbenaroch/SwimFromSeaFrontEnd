@@ -1,5 +1,5 @@
 .container{
-    background: url(/assets/swimbg2.jpeg) no-repeat;
+    background: url(/assets/desert.jpg) no-repeat;
     background-size: cover;
     direction: rtl;
     padding: 2rem;
@@ -38,7 +38,7 @@
     display: flex;
     justify-content: space-evenly;
     font-size: 77px;
-    top: 190px;
+    top: 290px;
     position: relative;
 }
 
@@ -51,7 +51,7 @@
     display: flex;
     justify-content: space-evenly;
     font-size: 77px;
-    bottom: 316px;
+    bottom: 220px;
     position: relative;
 }
 
@@ -64,7 +64,7 @@
     display: flex;
     justify-content: space-evenly;
     font-size: 77px;
-    bottom: 100px;
+    bottom: 200px;
     position: relative;
 }
 

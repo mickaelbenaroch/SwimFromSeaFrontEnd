@@ -38,7 +38,8 @@ export class SliderComponent implements OnInit {
   public secondTitle: boolean;
   public thirdTitle: boolean;
   public firstGallery: boolean = true;
-  public secondGallery: boolean = true;
+  public secondGallery: boolean = false;
+  public thirdGallery: boolean = false;
   public firstPage: boolean;
   public secondPage: boolean;
 
@@ -46,26 +47,22 @@ export class SliderComponent implements OnInit {
 
   ngOnInit() {
     this.firstPage = true;
-   setInterval(()=>{
-      var rand1 = this.shakeArray("images");
-      var rand2 = this.shakeArray("images");
-      var rand3 = this.shakeArray("images");
-      this.imagesArray1 = [rand1, rand2, rand3]
-      var rand4 = this.shakeArray("images2");
-      var rand5 = this.shakeArray("images2");
-      var rand6 = this.shakeArray("images2");
-      this.imagesArray2 = [rand4, rand5, rand6]
-
-   },3000)
-
 
     setTimeout(() => {
       this.firstGallery = false;
+      this.secondGallery = true;
+    }, 4000);
+
+    setTimeout(() => {
+      this.secondGallery = false;
+      this.thirdGallery = true;
+    }, 8000);
+
+    setTimeout(() => {
       this.firstTitle = true;
     }, 10000);
 
     setTimeout(() => {
-      this.secondGallery = false;
       this.secondTitle = true;
     }, 13000);
 

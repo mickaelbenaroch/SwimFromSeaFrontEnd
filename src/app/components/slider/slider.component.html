@@ -2,16 +2,15 @@
   <div id="firstTitle" *ngIf="firstTitle" class="white1 animated rotateIn">
     <span> חשבתם שאפריקאים מובילים בכל תחומי הספורט? </span>
   </div>
-<div [ngClass]="{'opacity03' : !this.firstGallery}" id="galllery1" class="gallery">
-  <div *ngFor="let img of imagesArray1" class="photo">
-    <img class="img animated fadeInDown" src="{{img}}">
-  </div>
-</div>
-<div [ngClass]="{'opacity03' : !this.secondGallery && !this.firstGallery}" id="galllery2" class="gallery2">
-    <div *ngFor="let img of imagesArray2" class="photo">
-      <img class="img animated jackInTheBox" src="{{img}}">
+    <div class="animated zoomInDown" *ngIf="firstGallery">
+      <img src="/assets/african.jpg" style="width:90%; height: 90vh; display: block; margin:auto;"/>
     </div>
-</div>
+    <div class="animated zoomInDown" *ngIf="secondGallery">
+      <img src="/assets/african2.png" style="width:90%; height: 90vh; display: block; margin:auto;"/>
+    </div>
+    <div class="animated zoomInDown" *ngIf="thirdGallery">
+      <img src="/assets/african3.png" style="width:50%; height: 50vh; display: block; margin:auto;"/>
+    </div>
   <div id="secondTitle" *ngIf="secondTitle" class="white2 animated rotateInDownLeft"> 
     <span> הכול טוב ויפה! אבל מה לגבי שחייה? </span>
   </div>
@@ -22,6 +21,3 @@
 
 
 <app-buuble-map [openMap]="secondPage"></app-buuble-map>
-<audio controls autoplay style="display: none">
-  <source src="/assets/jump.mp3" type="audio/mp3">
-</audio>
