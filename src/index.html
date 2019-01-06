@@ -16,10 +16,10 @@
     <script>
     var result;
     var countries;
-    $.get("http://localhost:3000", function(data, status){
+    $.get("https://sfsbackendapp.herokuapp.com/", function(data, status){
        result = data;
   });
-    $.get("http://localhost:3000/landlock", function(data, status){
+    $.get("https://sfsbackendapp.herokuapp.com/landlock", function(data, status){
        countries = data;
   });
 
