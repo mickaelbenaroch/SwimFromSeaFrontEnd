@@ -1,17 +1,17 @@
 .legend{
     z-index: 100;
-    top: 595px;
+    top: 438px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    left: 7px;
+    left: 8px;
     background: black;
     padding: 1rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     color: white;
-    font-size: 23px;
+    font-size: 20px;
     -ms-flex-direction: column;
     flex-direction: column;
     font-family: cursive;

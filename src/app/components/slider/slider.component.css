@@ -38,7 +38,7 @@
     display: flex;
     justify-content: space-evenly;
     font-size: 77px;
-    top: 290px;
+    top: 100px;
     position: relative;
 }
 
@@ -64,7 +64,7 @@
     display: flex;
     justify-content: space-evenly;
     font-size: 77px;
-    bottom: 200px;
+    bottom: 180px;
     position: relative;
 }
 
