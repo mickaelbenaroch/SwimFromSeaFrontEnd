@@ -1,6 +1,6 @@
 .legend{
     z-index: 100;
-    top: 438px;
+    bottom: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
