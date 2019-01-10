@@ -1,6 +1,6 @@
 .container{
-    background: url(/assets/desert.jpg) no-repeat;
-    background-size: cover;
+    /* background: url(/assets/desert.jpg) no-repeat;
+    background-size: cover; */
     direction: rtl;
     padding: 2rem;
     height: 100%;
@@ -71,3 +71,13 @@
 .opacity03{
     opacity: 0.3;
 }
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  }
+  
