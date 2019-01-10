@@ -48,15 +48,15 @@ export class SliderComponent implements OnInit {
   ngOnInit() {
     this.firstPage = true;
 
-    setTimeout(() => {
-      this.firstGallery = false;
-      this.secondGallery = true;
-    }, 4000);
+    // setTimeout(() => {
+    //   this.firstGallery = false;
+    //   this.secondGallery = true;
+    // }, 4000);
 
-    setTimeout(() => {
-      this.secondGallery = false;
-      this.thirdGallery = true;
-    }, 8000);
+    // setTimeout(() => {
+    //   this.secondGallery = false;
+    //   this.thirdGallery = true;
+    // }, 8000);
 
     setTimeout(() => {
       this.firstTitle = true;
