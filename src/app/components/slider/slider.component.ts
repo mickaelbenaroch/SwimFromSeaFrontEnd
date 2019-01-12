@@ -48,8 +48,8 @@ export class SliderComponent implements OnInit {
   ngOnInit() {
     this.firstPage = true;
  
-    let videoPlayer = <HTMLVideoElement> document.getElementById("myVideo");
-    videoPlayer.play();  
+    let videoPlayer: HTMLVideoElement = <HTMLVideoElement> document.getElementById("myVideo");
+    videoPlayer.play();
   
     // setTimeout(() => {
     //   this.firstGallery = false;
