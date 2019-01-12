@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -8,6 +8,7 @@ import * as $ from 'jquery';
 })
 export class SliderComponent implements OnInit {
 
+  @ViewChild('myVideo') videoplayer: any;
   public rightposition: string;
   public counter: number = 0;
   public images: string[] = ['/assets/africa1.jpeg',
@@ -47,10 +48,8 @@ export class SliderComponent implements OnInit {
 
   ngOnInit() {
     this.firstPage = true;
- 
-    let videoPlayer: HTMLVideoElement = <HTMLVideoElement> document.getElementById("myVideo");
-    videoPlayer.play();
-  
+    this.videoplayer.nativeElement.play();
+    
     // setTimeout(() => {
     //   this.firstGallery = false;
     //   this.secondGallery = true;

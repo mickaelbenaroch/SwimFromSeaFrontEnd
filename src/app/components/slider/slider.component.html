@@ -1,6 +1,6 @@
 <div class="container" *ngIf="firstPage">
 <!----<router-outlet></router-outlet> -->
-<video autoplay id="myVideo">
+<video controls id="myVideo" #videoPlayer>
   <source src="/assets/video.mp4" type="video/mp4">
 </video> 
   <div id="firstTitle" *ngIf="firstTitle" class="white1 animated rotateIn">
