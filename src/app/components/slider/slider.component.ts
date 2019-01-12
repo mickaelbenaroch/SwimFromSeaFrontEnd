@@ -23,7 +23,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
     console.log("afterinit");
     setTimeout(() => {
       this.videoplayer.nativeElement.play();
-    }, 2500);
+    }, 2000);
   }
 
   ngOnInit() {
