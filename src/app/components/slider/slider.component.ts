@@ -33,11 +33,11 @@ export class SliderComponent implements OnInit {
     setTimeout(() => {
       this.thirdTitle = true;
       this.secondTitle = false;
-    }, 40000);
+    }, 34000);
 
     setTimeout(() => {
       this.firstPage = false;
       this.secondPage = true;
-    }, 55000);
+    }, 44000);
   }
 }
