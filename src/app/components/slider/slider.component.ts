@@ -47,7 +47,10 @@ export class SliderComponent implements OnInit {
 
   ngOnInit() {
     this.firstPage = true;
-
+ 
+    let videoPlayer = <HTMLVideoElement> document.getElementById("myVideo");
+    videoPlayer.play();  
+  
     // setTimeout(() => {
     //   this.firstGallery = false;
     //   this.secondGallery = true;
@@ -64,10 +67,12 @@ export class SliderComponent implements OnInit {
 
     setTimeout(() => {
       this.secondTitle = true;
+      this.firstTitle = false;
     }, 13000);
 
     setTimeout(() => {
       this.thirdTitle = true;
+      this.secondTitle = false;
     }, 15000);
 
     setTimeout(() => {
