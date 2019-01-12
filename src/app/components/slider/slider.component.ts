@@ -6,9 +6,8 @@ import * as $ from 'jquery';
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css']
 })
-export class SliderComponent implements OnInit, AfterViewInit {
+export class SliderComponent implements OnInit {
 
-  @ViewChild('myVideo') videoplayer: any;
   public rightposition: string;
   public counter: number = 0;
   public firstTitle: boolean;
@@ -19,33 +18,26 @@ export class SliderComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
-  ngAfterViewInit() {
-    console.log("afterinit");
-    setTimeout(() => {
-      this.videoplayer.nativeElement.play();
-    }, 5000);
-  }
-
   ngOnInit() {
     this.firstPage = true;
   
     setTimeout(() => {
       this.firstTitle = true;
-    }, 10000);
+    }, 15000);
 
     setTimeout(() => {
       this.secondTitle = true;
       this.firstTitle = false;
-    }, 20000);
+    }, 30000);
 
     setTimeout(() => {
       this.thirdTitle = true;
       this.secondTitle = false;
-    }, 30000);
+    }, 45000);
 
     setTimeout(() => {
       this.firstPage = false;
       this.secondPage = true;
-    }, 40000);
+    }, 60000);
   }
 }
