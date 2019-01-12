@@ -38,6 +38,6 @@ export class SliderComponent implements OnInit {
     setTimeout(() => {
       this.firstPage = false;
       this.secondPage = true;
-    }, 50000);
+    }, 55000);
   }
 }
