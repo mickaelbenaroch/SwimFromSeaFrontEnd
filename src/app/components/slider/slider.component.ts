@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -6,7 +6,7 @@ import * as $ from 'jquery';
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css']
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent implements OnInit, AfterViewInit {
 
   @ViewChild('myVideo') videoplayer: any;
   public rightposition: string;
