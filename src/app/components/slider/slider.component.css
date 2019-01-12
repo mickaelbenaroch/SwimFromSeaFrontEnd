@@ -38,8 +38,8 @@
     display: flex;
     justify-content: space-evenly;
     font-size: 77px;
-    top: 100px;
-    position: relative;
+    top: 300px;
+    position: absolute;
 }
 
 .white2{
@@ -51,8 +51,8 @@
     display: flex;
     justify-content: space-evenly;
     font-size: 77px;
-    bottom: 220px;
-    position: relative;
+    top: 300px;
+    position: absolute;
 }
 
 .white3{
@@ -64,8 +64,8 @@
     display: flex;
     justify-content: space-evenly;
     font-size: 77px;
-    bottom: 180px;
-    position: relative;
+    font: 300px;
+    position: absolute;
 }
 
 .opacity03{
