@@ -63,3 +63,21 @@
     animation-name: example;
     animation-duration: 4s;
   }
+
+  .button{
+    position: absolute;
+    bottom: 0;
+    z-index: 100000;
+    right: 34px;
+    background: transparent;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    font-size: 23px;
+    font-family: Assistant;
+    font-style: italic;
+  }
+
+  .button:hover{
+      font-size: 40px;
+  }

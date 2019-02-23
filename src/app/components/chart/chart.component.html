@@ -1,0 +1,50 @@
+<div class="envelop animated lightSpeedIn" [ngClass]="{'bg-white no-height': graph }">
+    <div class="div-1" *ngIf="text1" [ngClass]="{'animated rotateInUpLeft': text1 }">
+        טענה: קירבה של מדינה לחוף הים מהווה יתרון בתחרויות שיאי עולם בתחומי השחייה
+    </div>
+    <div class="div-2" *ngIf="text2" [ngClass]="{'animated rotateInUpLeft': text2 }">
+        הוכחה: נוכיח בשלילה כי הטענה לא נכונה...
+    </div>
+    <div *ngIf="graph" class="div-graph">
+        <ngx-charts-bar-vertical id="firstGraph"
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="resultArrayLand"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]=false
+            [showXAxisLabel]=false
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [showGridLines]=false
+            [animations]=true
+            [trimXAxisTicks]=false
+            (select)="onSelect($event)">
+    </ngx-charts-bar-vertical>
+    <div class="graph-title">שיאים של מדינות ללא חוף ים</div>
+    <br><br>
+    <ngx-charts-bar-vertical id="secondGraph"
+            [view]="view"
+            [scheme]="colorScheme2"
+            [results]="resultArrayRecord"
+            [gradient]="gradient" 
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis" 
+            [animations]=true
+            [trimXAxisTicks]=false
+            [legend]=false
+            [showXAxisLabel]=false
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel2"
+            [yAxisLabel]="yAxisLabel"
+            [showGridLines]=false
+            (select)="onSelect($event)">
+    </ngx-charts-bar-vertical>
+    <div class="graph-title">שיאים של מדינות עם חוף ים</div>
+    <br><br>
+    <button class="button" (click)="MoveToNextView()">Next View</button>
+    </div>
+</div>
+

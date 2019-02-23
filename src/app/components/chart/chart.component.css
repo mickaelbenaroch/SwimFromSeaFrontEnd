@@ -1,0 +1,68 @@
+.envelop{
+  /*background: black;*/
+  color: white;
+  font-size: 8rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-family: Assistant;
+  direction: rtl;
+  text-align: right;
+  padding: 3rem;
+  background-image: url('/assets/swimbg2.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.no-height{
+  height: unset;
+}
+ 
+.div-1{
+    margin-top: 8rem;
+    opacity: 0;
+}
+
+.div-2{ 
+  margin-top: 10rem;
+  opacity: 0;
+}
+
+.div-graph{
+  margin-top: 10rem;
+}
+
+.visible{
+  opacity: 1;
+}
+
+::ng-deep .chart-legend .legend-label-text {
+  padding-left: 0.3rem;
+}
+
+.bg-white{
+  background: whitesmoke;
+}  
+
+.graph-title{
+  text-align: center;
+  color: grey;
+}
+.button{
+  position: absolute;
+  bottom: 0;
+  z-index: 100000;
+  right: 34px;
+  background: transparent;
+  color: grey;
+  border: none;
+  cursor: pointer;
+  font-size: 23px;
+  font-family: Assistant;
+  font-style: italic;
+}
+
+.button:hover{
+    font-size: 40px;
+}

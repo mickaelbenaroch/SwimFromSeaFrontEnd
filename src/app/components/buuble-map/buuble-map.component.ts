@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-buuble-map',
@@ -6,8 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./buuble-map.component.css']
 })
 export class BuubleMapComponent implements OnInit { 
+
+  //#region Public members
   @Input() openMap: boolean;
-  constructor() { }
+  //#endregion
+
+  //#region  Constructor & lifecycle Hooks
+  constructor(private router: Router) { }
 
   ngOnInit() {
     setTimeout(()=>{
@@ -17,5 +23,11 @@ export class BuubleMapComponent implements OnInit {
       $('#mapcontainer').attr( 'animation-name', 'rollIn !important');
     },21000)
   }
+//#endregion
 
+//#region Public Methods
+  public MoveToNextView():void{
+    this.router.navigateByUrl('/chart');
+  }
+//#endregion  
 }
