@@ -1,6 +1,5 @@
 .envelop{
-  /*background: black;*/
-  color: white;
+  color: black;
   font-size: 8rem;
   display: flex;
   flex-direction: column;
@@ -9,7 +8,7 @@
   direction: rtl;
   text-align: right;
   padding: 3rem;
-  background-image: url('/assets/swimbg2.jpeg');
+  background-image: url('/assets/newbg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;

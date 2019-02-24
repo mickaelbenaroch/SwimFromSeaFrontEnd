@@ -5,6 +5,8 @@ import { RecordModel } from '../../Models/recordmodel';
 import { LandLockModel } from '../../Models/landlockmodel';
 import { ResultModel } from '../../Models/resultmodel';
 import { Router } from '@angular/router';
+import { BubleserviceService } from '../../Services/bubleservice.service';
+import { DonutsModel } from '../../Models/donutsModel';
 
 @Component({
   selector: 'app-chart',
@@ -13,6 +15,7 @@ import { Router } from '@angular/router';
 })
 export class ChartComponent implements OnInit {
 
+//#region Public Members
   public text1: boolean;
   public text2: boolean;
   public graph: boolean;
@@ -42,27 +45,16 @@ export class ChartComponent implements OnInit {
   colorScheme2 = {
     domain: ['red']
   };
+  //#endregion
 
-  single = [
-    {
-      "name": "Germany",
-      "value": 8940000
-    },
-    {
-      "name": "USA",
-      "value": 5000000
-    },
-    {
-      "name": "France",
-      "value": 7200000
-    }
-  ];
-
+//#region COnstructor & Lifecycle Hooks
 constructor(public httpservice: HttpClient,
-            public router: Router){
+            public router: Router,
+            public bubleservice: BubleserviceService){
 
 }
-ngOnInit(){
+
+public ngOnInit(): void{
   this.GetData();
   this.text1 = true;
   setTimeout(() =>{
@@ -81,11 +73,20 @@ ngOnInit(){
     },100)
   },10000)
 }
+//#endregion
 
+//#region Public Methods
+/**
+ * On select callback
+ * @param event 
+ */
 public onSelect(event): void {
   console.log(event);
 }
 
+/**
+ * Init arrays of data
+ */
 public GetData():void{
   this.httpservice.get("https://quiet-basin-91917.herokuapp.com/landlocknames").subscribe((res: LandLockModel[])=>{
     console.log(res);
@@ -148,7 +149,11 @@ public GetData():void{
   })
 }
 
+/**
+ * Move to next view
+ */
 public MoveToNextView():void{
   this.router.navigateByUrl('/bubbles');
 }
+//#endregion
 }

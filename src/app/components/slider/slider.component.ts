@@ -8,6 +8,7 @@ import * as $ from 'jquery';
 })
 export class SliderComponent implements OnInit {
 
+  //#region Public Members
   public rightposition: string;
   public counter: number = 0;
   public firstTitle: boolean;
@@ -15,10 +16,12 @@ export class SliderComponent implements OnInit {
   public thirdTitle: boolean;
   public firstPage: boolean;
   public secondPage: boolean;
+  //#endregion
 
+  //#region Constructor & Lifecycle Hooks
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit():void {
     this.firstPage = true;
   
     setTimeout(() => {
@@ -40,4 +43,5 @@ export class SliderComponent implements OnInit {
       this.secondPage = true;
     }, 44000);
   }
+  //#endregion
 }

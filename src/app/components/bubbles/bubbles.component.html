@@ -1,3 +1,63 @@
 <div class="title" *ngIf="conclusion">
-  תסיקו מסקנות לבד!
+  אלה סוגי הספורט בתחום השחייה שעבורם אספנו נתונים: (ועליהם מתבסס המחקר)
+ <ul>
+  <li>שחייה</li>
+  <li>ווטר פולו</li>
+  <li>קיאק</li>
+  <li>צלילה</li>
+  <li>חתירה</li>
+  <li>שיט</li>
+  <li>כדורעף-חופים</li>
+ </ul>
+ <br>
+ <div>והנה החלוקה בניהם לפי מדינות עם ובלי חוף ים...</div>
 </div>
+
+<slideshow  *ngIf="slide"
+           [height]="height"
+           [minHeight]="'525px'"
+           [autoPlay]="true" 
+           [showArrows]="false"
+           [imageUrls]="imageSources"
+           [lazyLoad]="imageSources?.length > 1"
+           [autoPlayWaitForLazyLoad]="true">
+</slideshow>
+
+<div class="div" *ngIf="pie"> 
+    <ngx-charts-advanced-pie-chart 
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="resultArrayLand"
+      [gradient]="gradient"
+      (select)="onSelect($event)">
+    </ngx-charts-advanced-pie-chart>
+    <br><br>
+    <ngx-charts-advanced-pie-chart 
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="resultArrayRecord"
+      [gradient]="gradient"
+      (select)="onSelect($event)">
+    </ngx-charts-advanced-pie-chart>
+     <br><br>
+    <button class="button" (click)="MoveToConclusion()">Next View</button>
+</div>
+  
+<div class="title" *ngIf="finish">
+  <div>
+      לסיום, אפשר להגיד שקירבה של מדינה לים אכן מהווה לה יתרון משמעותי בתחרויות שחייה...
+  </div>
+  <br><br><br><br>
+  <div>
+     תודה
+  </div>
+  <div>
+     בני, ניקיטה , מיכאל
+  </div>
+<div>
+
+
+
+
+
+
