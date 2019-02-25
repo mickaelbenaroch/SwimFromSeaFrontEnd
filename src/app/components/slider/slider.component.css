@@ -4,12 +4,13 @@
     direction: rtl;
     padding: 2rem;
     height: 100%;
+    text-align: center;
 }
 
 .gallery{
     display: flex;
     flex-direction: row;
-    position: relative;
+    position: relative; 
     justify-content: space-around;
 }
 
