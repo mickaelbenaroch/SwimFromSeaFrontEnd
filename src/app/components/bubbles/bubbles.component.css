@@ -31,4 +31,10 @@
       font-size: 40px;
   }
 
- 
+ .tex{
+     font-size: 3rem;
+     color: grey;
+     font-family: Assistant;
+     font-weight: bold;
+     margin: auto;
+ }

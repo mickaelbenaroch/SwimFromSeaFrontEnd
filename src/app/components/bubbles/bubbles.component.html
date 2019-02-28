@@ -24,6 +24,7 @@
 </slideshow>
 
 <div class="div" *ngIf="pie"> 
+   <div class="tex">ללא חוף ים</div>
     <ngx-charts-advanced-pie-chart 
       [view]="view"
       [scheme]="colorScheme"
@@ -32,6 +33,7 @@
       (select)="onSelect($event)">
     </ngx-charts-advanced-pie-chart>
     <br><br>
+    <div class="tex">עם חוף ים</div>
     <ngx-charts-advanced-pie-chart 
       [view]="view"
       [scheme]="colorScheme"

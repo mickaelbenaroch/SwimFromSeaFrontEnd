@@ -35,7 +35,7 @@ export class BubblesComponent implements OnInit {
   explodeSlices = false;
   doughnut = false;
   //#endregion
-  
+   
   //#region Constructor & Lifecycle Hooks
   constructor(public httpservice: HttpClient) { }
 
@@ -44,12 +44,12 @@ export class BubblesComponent implements OnInit {
     setTimeout(()=>{
       this.conclusion = false;
       this.slide = true;
-    },30000)
+    },20000)
 
     setTimeout(()=>{
       this.slide = false;
       this.pie = true;
-    },90000)
+    },45000)
   }
 //#endregion
 
